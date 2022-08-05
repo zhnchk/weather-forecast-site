@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" href="./img/icon.svg">
+	<link rel="stylesheet" href="./style.css">
+	<title>weather</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__top">
+				<h1 class="header__title">MY WEATHER</h1>
+				<form class="header__search search" action="#">
+					<input class="search__input" type="text" placeholder="enter the city">
+					<button class="search__button" type="submit">
+						<img class="search__img" src="./img/search.svg" alt="search image">
+					</button>
+				</form>
+			</div>
+			<div class="header__bottom">
+				<ul class="header__menu menu">
+					<li class="menu__item" id="today-button">Today</li>
+					<li class="menu__item" id="f-day-forecast-button">5-day forecast</li>
+				</ul>
+			</div>
+		</header>
+		<main class="main">
+			<div class="main__first-screen">
+				<section class="current-weather">
+					<div class="current-weather__top">
+						<h2 class="current-weather__title">CURRENT WEATHER</h2>
+						<div class="current-weather__date"></div>
+					</div>
+					<div class="current-weather__bottom">
+						<div class="current-weather__info">
+							<img src="" alt="current weather" class="current-weather__img">
+							<p class="current-weather__main"></p>
+						</div>
+						<div class="current-weather__temperature">
+							<div class="current-weather__real-temperature"></div>
+							<div class="current-weather__real-feel"></div>
+							<p class="current-weather__main"></p>
+						</div>
+						<div class="current-weather__other">
+							<div class="current-weather__sunrise">
+								<span>Sunrise:</span>
+								<span></span>
+							</div>
+							<div class="current-weather__sunset">
+								<span>Sunset:</span>
+								<span></span>
+							</div>
+							<div class="current-weather__duration">
+								<span>Duration:</span>
+								<span></span>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="hourly">
+					<div class="hourly__description">
+						<h2 class="description__today">TODAY</h2>
+						<div class="hourly__forecast forecast">Forecast</div>
+						<div class="hourly__temperature">Temp (&#176;C)</div>
+						<div class="hourly__feel feel">RealFeel</div>
+						<div class="hourly__wind">Wind (m/s)</div>
+					</div>
+					<div class="hourly__body">
+						<div class="hourly__night night">
+							<div class="night__name name">night</div>
+							<div class="night__body">
+								<div class="night__zero zero">
+									<div class="zero__time">12 AM</div>
+									<img class="zero__img img" src="" alt="night icon temperature">
+									<div class="zero__forecast forecast"></div>
+									<div class="zero__temperature"></div>
+									<div class="zero__feel feel"></div>
+									<div class="zero__wind"></div>
+								</div>
+								<div class="night__three three">
+									<div class="three__time">3 AM</div>
+									<img class="three__img img" src="" alt="night icon temperature">
+									<div class="three__forecast forecast"></div>
+									<div class="three__temperature"></div>
+									<div class="three__feel feel"></div>
+									<div class="three__wind"></div>
+								</div>
+							</div>
+						</div>
+						<div class="hourly__morning morning">
+							<div class="morning__name name">morning</div>
+							<div class="morning__body">
+								<div class="morning__six six">
+									<div class="six__time">6 AM</div>
+									<img class="six__img img" src="" alt="morning icon temperature">
+									<div class="six__forecast forecast"></div>
+									<div class="six__temperature"></div>
+									<div class="six__feel feel"></div>
+									<div class="six__wind"></div>
+								</div>
+								<div class="morning__nine nine">
+									<div class="nine__time">9 AM</div>
+									<img class="nine__img img" src="" alt="morning icon temperature">
+									<div class="nine__forecast forecast"></div>
+									<div class="nine__temperature"></div>
+									<div class="nine__feel feel"></div>
+									<div class="nine__wind"></div>
+								</div>
+							</div>
+						</div>
+						<div class="hourly__day day">
+							<div class="day__name name">day</div>
+							<div class="day__body">
+								<div class="day__twelve twelve">
+									<div class="twelve__time">12 PM</div>
+									<img class="twelve__img img" src="" alt="day icon temperature">
+									<div class="twelve__forecast forecast"></div>
+									<div class="twelve__temperature"></div>
+									<div class="twelve__feel feel"></div>
+									<div class="twelve__wind"></div>
+								</div>
+								<div class="day__fifteen fifteen">
+									<div class="fifteen__time">3 PM</div>
+									<img class="fifteen__img img" src="" alt="day icon temperature">
+									<div class="fifteen__forecast forecast"></div>
+									<div class="fifteen__temperature"></div>
+									<div class="fifteen__feel feel"></div>
+									<div class="fifteen__wind"></div>
+								</div>
+							</div>
+						</div>
+						<div class="hourly__evening evening">
+							<div class="evening__name name">evening</div>
+							<div class="evening__body">
+								<div class="evening__eighteen eighteen">
+									<div class="eighteen__time">6 PM</div>
+									<img class="eighteen__img img" src="" alt="evening icon temperature">
+									<div class="eighteen__forecast forecast"></div>
+									<div class="eighteen__temperature"></div>
+									<div class="eighteen__feel feel"></div>
+									<div class="eighteen__wind"></div>
+								</div>
+								<div class="evening__twenty-one twenty-one">
+									<div class="twenty-one__time">9 PM</div>
+									<img class="twenty-one__img img" src="" alt="evening icon temperature">
+									<div class="twenty-one__forecast forecast"></div>
+									<div class="twenty-one__temperature"></div>
+									<div class="twenty-one__feel feel"></div>
+									<div class="twenty-one__wind"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			<div class="main__second-screen">
+				<section class="short-forecast">
+					<div class="short-forecast__section section">
+						<h3 class="section__title"></h3>
+						<div class="section__date"></div>
+						<img class="section__img" src="" alt="section image">
+						<div class="section__temperature"></div>
+						<div class="section__description"></div>
+					</div>
+					<div class="short-forecast__section section">
+						<h3 class="section__title"></h3>
+						<div class="section__date"></div>
+						<img class="section__img" src="" alt="section image">
+						<div class="section__temperature"></div>
+						<div class="section__description"></div>
+					</div>
+					<div class="short-forecast__section section">
+						<h3 class="section__title"></h3>
+						<div class="section__date"></div>
+						<img class="section__img" src="" alt="section image">
+						<div class="section__temperature"></div>
+						<div class="section__description"></div>
+					</div>
+					<div class="short-forecast__section section">
+						<h3 class="section__title"></h3>
+						<div class="section__date"></div>
+						<img class="section__img" src="" alt="section image">
+						<div class="section__temperature"></div>
+						<div class="section__description"></div>
+					</div>
+					<div class="short-forecast__section section">
+						<h3 class="section__title"></h3>
+						<div class="section__date"></div>
+						<img class="section__img" src="" alt="section image">
+						<div class="section__temperature"></div>
+						<div class="section__description"></div>
+					</div>
+				</section>
+				<section class="f-day-forecast">
+					<div class="f-day-forecast__description description">
+						<h2 class="description__day">TODAY</h2>
+						<div class="description__forecast forecast">Forecast</div>
+						<div class="description__temperature">Temp (&#176;C)</div>
+						<div class="description__feel feel">RealFeel</div>
+						<div class="description__wind">Wind (m/s)</div>
+					</div>
+					<div class="f-day-forecast__body">
+						<div class="f-day-forecast__section">
+							<div class="f-day-forecast__time"></div>
+							<img src="" alt="weather icon" class="f-day-forecast__img img">
+							<div class="f-day-forecast__forecast"></div>
+							<div class="f-day-forecast__temperature"></div>
+							<div class="f-day-forecast__feel"></div>
+							<div class="f-day-forecast__wind"></div>
+						</div>
+						<div class="f-day-forecast__section">
+							<div class="f-day-forecast__time"></div>
+							<img src="" alt="weather icon" class="f-day-forecast__img img">
+							<div class="f-day-forecast__forecast"></div>
+							<div class="f-day-forecast__temperature"></div>
+							<div class="f-day-forecast__feel"></div>
+							<div class="f-day-forecast__wind"></div>
+						</div>
+						<div class="f-day-forecast__section">
+							<div class="f-day-forecast__time"></div>
+							<img src="" alt="weather icon" class="f-day-forecast__img img">
+							<div class="f-day-forecast__forecast"></div>
+							<div class="f-day-forecast__temperature"></div>
+							<div class="f-day-forecast__feel"></div>
+							<div class="f-day-forecast__wind"></div>
+						</div>
+						<div class="f-day-forecast__section">
+							<div class="f-day-forecast__time"></div>
+							<img src="" alt="weather icon" class="f-day-forecast__img img">
+							<div class="f-day-forecast__forecast"></div>
+							<div class="f-day-forecast__temperature"></div>
+							<div class="f-day-forecast__feel"></div>
+							<div class="f-day-forecast__wind"></div>
+						</div>
+						<div class="f-day-forecast__section">
+							<div class="f-day-forecast__time"></div>
+							<img src="" alt="weather icon" class="f-day-forecast__img img">
+							<div class="f-day-forecast__forecast"></div>
+							<div class="f-day-forecast__temperature"></div>
+							<div class="f-day-forecast__feel"></div>
+							<div class="f-day-forecast__wind"></div>
+						</div>
+						<div class="f-day-forecast__section">
+							<div class="f-day-forecast__time"></div>
+							<img src="" alt="weather icon" class="f-day-forecast__img img">
+							<div class="f-day-forecast__forecast"></div>
+							<div class="f-day-forecast__temperature"></div>
+							<div class="f-day-forecast__feel"></div>
+							<div class="f-day-forecast__wind"></div>
+						</div>
+						<div class="f-day-forecast__section">
+							<div class="f-day-forecast__time"></div>
+							<img src="" alt="weather icon" class="f-day-forecast__img img">
+							<div class="f-day-forecast__forecast"></div>
+							<div class="f-day-forecast__temperature"></div>
+							<div class="f-day-forecast__feel"></div>
+							<div class="f-day-forecast__wind"></div>
+						</div>
+						<div class="f-day-forecast__section">
+							<div class="f-day-forecast__time"></div>
+							<img src="" alt="weather icon" class="f-day-forecast__img img">
+							<div class="f-day-forecast__forecast"></div>
+							<div class="f-day-forecast__temperature"></div>
+							<div class="f-day-forecast__feel"></div>
+							<div class="f-day-forecast__wind"></div>
+						</div>
+
+
+					</div>
+				</section>
+			</div>
+		</main>
+		<section class="error">
+			<div class="error__massage">
+				<img class="error__img" src="./img/error.svg" alt="error icon">
+				<h2 class="error__text">You have entered an incorrect city name or such a city does not exist</h2>
+			</div>
+		</section>
+		<footer class="footer">
+			<div class="footer__info">
+				<span class="footer__create-by">Create by @zhnchk</span>
+				<a class="footer__link-git" target="_blank" href="https://github.com/zhnchk">
+					<img class="footer__img-git" src="./img/git.svg" alt="git icon">
+				</a>
+				<a class="footer__link-inst" target="_blank" href="https://www.instagram.com/zhn.chk/">
+					<img class="footer__img-inst" src="./img/inst.svg" alt="instagram icon">
+				</a>
+			</div>
+		</footer>
+	</div>
+</body>
+
+<script src="./script.js"></script>
+
+</html>
