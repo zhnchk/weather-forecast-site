@@ -530,12 +530,6 @@ body {
 		bottom: 10px;
 		right: 20px;
 	}
-	.menu__item {
-		padding: 20px;
-	}
-	.menu__item:first-child {
-		padding: 20px 20px 20px 0px;
-	}
 	.header__bottom {
 		padding: 0px 20px;
 	}
@@ -622,12 +616,6 @@ body {
 	}
 	.header__menu {
 		justify-content: space-around;
-	}
-	.menu__item {
-		padding: 20px 0px;
-	}
-	.menu__item:first-child {
-		padding: 20px 0px;
 	}
 	.current-weather__real-temperature {
 		font-size: 45px;
